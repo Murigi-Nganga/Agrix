@@ -1,3 +1,45 @@
 <resources>
     <string name="app_name">Agrix</string>
+
+<!--    Appbar Text Resources-->
+    <string name="add_product">Add Product</string>
+    <string name="update_product">Update Product</string>
+    <string name="delete_product">Delete Product</string>
+    <string name="product_records">Product Records</string>
+    <string name="about">About</string>
+
+<!--    Button and Menu Text Resources-->
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="records">Records</string>
+    <string name="authors">Authors</string>
+    <string name="calculator">Calculator</string>
+    <string name="nav_header_email">group28@mobile.com</string>
+
+<!--    Hint Text Resources-->
+    <string name="item_name_hint">Item Name</string>
+    <string name="quantity_hint">Quantity</string>
+    <string name="measurement_hint">Desired Measurement</string>
+    <string name="new_quantity_hint">New Quantity</string>
+    <string name="warning">Warning: This delete operation cannot be undone</string>
+
+<!--Toast Text Resources-->
+    <string name="add_successful">Product added successfully!</string>
+    <string name="fill_fields">Please fill in all fields!</string>
+    <string name="already_exists">Product already exists!</string>
+    <string name="update_successful">Product updated successfully!</string>
+    <string name="delete_successful">Product deleted successfully!</string>
+    <string name="not_found">Product not found!</string>
+    <string name="found">Product found!</string>
+
+<!--About Screen Text Resources-->
+    <string name="about_explanation">Agrix is an application that allows farmers to track their produce quantitatively</string>
+    <string name="app_authors">
+        1. Leslie Asava
+        2. Hope Kagame
+        3. Gracious Ng\'ang\'a
+        4. Martin Mativo
+    </string>
+
 </resources>
