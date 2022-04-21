@@ -15,7 +15,11 @@
     <string name="records">Records</string>
     <string name="authors">Authors</string>
     <string name="calculator">Calculator</string>
+    <string name="main_actions">Main Actions</string>
+    <string name="extras">Extras</string>
+    <string name="nav_header_title">ESMP Group 28</string>
     <string name="nav_header_email">group28@mobile.com</string>
+    <string name="nav_img_description">Image of a leaf with a water drop</string>
 
     <!--    Hint Text Resources-->
     <string name="item_name_hint">Item Name</string>
