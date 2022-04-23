@@ -13,7 +13,6 @@
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="records">Records</string>
-    <string name="authors">Authors</string>
     <string name="calculator">Calculator</string>
     <string name="main_actions">Main Actions</string>
     <string name="extras">Extras</string>
@@ -28,7 +27,7 @@
     <string name="new_quantity_hint">New Quantity</string>
     <string name="warning">Warning: This delete operation cannot be undone</string>
 
-    <!--Toast Text Resources-->
+    <!--Snack bar Text Resources-->
     <string name="add_successful">Product added successfully!</string>
     <string name="fill_fields">Please fill in all fields!</string>
     <string name="already_exists">Product already exists!</string>
@@ -39,13 +38,57 @@
 
     <!--About Screen Text Resources-->
     <string name="about_explanation">Agrix is an application that allows farmers to track their produce quantitatively</string>
+    <string name="authors">Authors</string>
     <string name="app_authors">
-        1. Leslie Asava
-        2. Hope Kagame
-        3. Gracious Ng\'ang\'a
-        4. Martin Mativo
+        1. Leslie Asava <br />
+        2. Hope Kagame <br />
+        3. Gracious Ng\'ang\'a <br />
+        4. Martin Mativo <br />
     </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    Dropdown dummy data-->
+    <string-array name="spinner_array">
+        <item>Milk</item>
+        <item>Rice</item>
+        <item>Maize</item>
+        <item>Kale</item>
+        <item>Oranges</item>
+    </string-array>
+
+    <string-array name="measuring_units">
+        <item>Litres</item>
+        <item>Kilograms</item>
+        <item>Sacks</item>
+        <item>Bunches</item>
+        <item>Kilograms</item>
+    </string-array>
+
+    <string-array name="current_quantities">
+        <item>34</item>
+        <item>4.8</item>
+        <item>4</item>
+        <item>7</item>
+        <item>7.9</item>
+    </string-array>
+
+    <string-array name="last_edited">
+        <item>12–03–22 4:56 PM</item>
+        <item>12–03–22 4:56 PM</item>
+        <item>12–03–22 4:56 PM</item>
+        <item>12–03–22 4:56 PM</item>
+        <item>12–03–22 4:56 PM</item>
+    </string-array>
+
+    <string name="spinner_text">Dropdown Items</string>
+    <string name="first_number">First Number</string>
+    <string name="plus">+</string>
+    <string name="subtract">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+    <string name="second_number">Second Number</string>
+    <string name="calculate">Calculate</string>
+    <string name="result">Result:</string>
+    <string name="current_quantity">Current Quantity:</string>
+    <string name="zero">0.0</string>
 
 </resources>

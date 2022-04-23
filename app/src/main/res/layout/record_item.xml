@@ -1,0 +1,45 @@
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CardView.Light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/frag_record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Item Name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/frag_record_current_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Quantity: " />
+
+            <TextView
+                android:id="@+id/frag_record_measuring_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="25dp"
+                android:paddingEnd = "25dp"
+                android:text="Measuring Unit: " />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/frag_record_last_edited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Edited: " />
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

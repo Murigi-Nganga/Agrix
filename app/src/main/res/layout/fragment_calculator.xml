@@ -1,14 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_calculator_ll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.CalculatorFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <EditText
+        android:id="@+id/frag_calculator_et_first_num"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/calculator"/>
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/first_number"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColorHint="@color/textHintColor" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RadioGroup
+        android:id="@+id/frag_calculator_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/frag_calculator_radio_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/plus" />
+
+        <RadioButton
+            android:id="@+id/frag_calculator_radio_subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtract" />
+
+        <RadioButton
+            android:id="@+id/frag_calculator_radio_multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/multiply" />
+
+        <RadioButton
+            android:id="@+id/frag_calculator_radio_divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/divide" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/frag_calculator_et_second_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/second_number"
+        android:inputType="numberDecimal|numberSigned"
+        android:textColorHint="@color/textHintColor" />
+
+    <Button
+        android:id="@+id/frag_calculator_btn_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate" />
+
+    <LinearLayout
+        android:id="@+id/frag_calculator_result_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/frag_calculator_tv_result_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/result" />
+
+        <TextView
+            android:id="@+id/frag_calculator_tv_result_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/zero" />
+    </LinearLayout>
+
+</LinearLayout>

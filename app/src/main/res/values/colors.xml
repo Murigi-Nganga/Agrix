@@ -10,4 +10,7 @@
     <color name="primaryTextColor">#ffffff</color>
     <color name="secondaryTextColor">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="rich_black">#333333</color>
+    <color name="textHintColor">#757575</color>
+    <color name="warning">#D50000</color>
 </resources>
