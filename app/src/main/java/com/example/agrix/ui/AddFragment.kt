@@ -55,10 +55,14 @@ class AddFragment : Fragment() {
                 val c = Calendar.getInstance()
                 val currentYear = c.get(Calendar.YEAR)
 
-                val currentMonth: String  = if(c.get(Calendar.MONTH) < 10) {
-                    "0${c.get(Calendar.MONTH) }"
+                // Add one because months are returned as indexes (starting from 0)
+                val correctMonth: Int= c.get(Calendar.MONTH) + 1
+
+                // Add a 0 before month number if less than 10
+                val currentMonth: String  = if(correctMonth in 1..9) {
+                    "0${correctMonth }"
                 } else {
-                    "${c.get(Calendar.MONTH) }"
+                    "$correctMonth"
                 }
 
                 val currentDay: String  = if(c.get(Calendar.DAY_OF_MONTH) < 10) {

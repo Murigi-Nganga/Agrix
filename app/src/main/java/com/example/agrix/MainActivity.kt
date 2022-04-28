@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         // Using the Toolbar in place of the default ActionBar
         setSupportActionBar(binding.appBarMain.toolbar)
 
+        //Add drawer layout and navigation
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)

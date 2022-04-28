@@ -13,8 +13,7 @@
             android:id="@+id/frag_record_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="Item Name" />
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,23 +22,20 @@
             <TextView
                 android:id="@+id/frag_record_current_quantity"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Current Quantity: " />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/frag_record_measuring_unit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingStart="25dp"
-                android:paddingEnd = "25dp"
-                android:text="Measuring Unit: " />
+                android:paddingEnd = "25dp" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/frag_record_last_edited"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Last Edited: " />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

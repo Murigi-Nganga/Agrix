@@ -34,7 +34,7 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         TODO("Not yet implemented")
     }
 
-    // CRUD OPERATION
+    // CRUD OPERATIONS
     // CREATE
     fun insertData(product: Product): Int {
 
@@ -110,14 +110,13 @@ class DatabaseHandler(context: Context) : SQLiteOpenHelper(context, DATABASE_NAM
         val cv = ContentValues()
         cv.put(COL_QUANTITY, productQuantity)
         cv.put(COL_LAST_EDITED, productLastEdited)
-        val result = db.update(
+
+        return db.update(
             TABLE_NAME,
             cv,
             "$COL_PRODUCT_NAME=?",
             arrayOf(productName)
         )
-
-        return result
     }
 
 //     DELETE
