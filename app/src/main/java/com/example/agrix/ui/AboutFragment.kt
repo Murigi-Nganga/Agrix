@@ -9,7 +9,7 @@ import com.example.agrix.databinding.FragmentAboutBinding
 
 class AboutFragment : Fragment() {
 
-    // Binding object
+    // Fragment Binding object
     private lateinit var binding: FragmentAboutBinding
 
     override fun onCreateView(

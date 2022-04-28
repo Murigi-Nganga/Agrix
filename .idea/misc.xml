@@ -23,12 +23,13 @@
         <entry key="app/src/main/res/layout/content_main.xml" value="0.15911151405258386" />
         <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_calculator.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_delete.xml" value="0.32222222222222224" />
         <entry key="app/src/main/res/layout/fragment_records.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_update.xml" value="0.5" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/no_items.xml" value="0.11329628046173579" />
         <entry key="app/src/main/res/layout/record_item.xml" value="0.36560247167868176" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
         <entry key="app/src/main/res/menu/navigation_menu.xml" value="0.19635416666666666" />
