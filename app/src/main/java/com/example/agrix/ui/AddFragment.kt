@@ -41,7 +41,7 @@ class AddFragment : Fragment() {
             val quantityInput = binding.fragAddEtQuantity.text
             val measurementInput = binding.dropdownMenuAdd.text
 
-            if (productInput.toString().trim().isEmpty() || quantityInput.isEmpty() || measurementInput.isEmpty()) {
+            if (productInput.toString().trim().isEmpty() || quantityInput.isNullOrEmpty() || measurementInput.isEmpty()) {
 
                     Snackbar.make(binding.root, "Please fill in all fields", Snackbar.LENGTH_LONG)
                         .show()

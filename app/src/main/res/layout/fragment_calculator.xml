@@ -1,90 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frag_calculator_ll"
+    android:id="@+id/frag_calculator_cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.CalculatorFragment">
 
-    <EditText
-        android:id="@+id/frag_calculator_et_first_num"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/frag_calculator_first_num_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:ems="10"
         android:hint="@string/first_number"
+        android:layout_marginTop="@dimen/first_layout_top_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/frag_calculator_et_first_num"
+        android:layout_width="match_parent"
         android:inputType="numberDecimal|numberSigned"
+        android:layout_height="wrap_content"
         android:textColorHint="@color/textHintColor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
         android:id="@+id/frag_calculator_radio_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frag_calculator_first_num_til">
 
         <RadioButton
             android:id="@+id/frag_calculator_radio_plus"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:checked="true"
-            android:text="@string/plus" />
+            android:text="@string/plus"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/frag_calculator_radio_subtract"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/subtract" />
+            android:layout_weight="1"
+            android:text="@string/subtract"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/frag_calculator_radio_multiply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/multiply" />
+            android:layout_weight="1"
+            android:text="@string/multiply"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/frag_calculator_radio_divide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/divide" />
+            android:text="@string/divide"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </RadioGroup>
 
-    <EditText
-        android:id="@+id/frag_calculator_et_second_num"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/frag_calculator_second_num_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:ems="10"
         android:hint="@string/second_number"
-        android:inputType="numberDecimal|numberSigned"
-        android:textColorHint="@color/textHintColor" />
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frag_calculator_radio_group">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/frag_calculator_et_second_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned"
+            android:textColorHint="@color/textHintColor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/frag_calculator_btn_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calculate" />
+        android:layout_marginTop="40dp"
+        android:height="@dimen/btn_height"
+        android:text="@string/calculate"
+        app:cornerRadius="@dimen/btn_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frag_calculator_second_num_til" />
 
     <LinearLayout
         android:id="@+id/frag_calculator_result_ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frag_calculator_btn_result">
 
         <TextView
             android:id="@+id/frag_calculator_tv_result_text"
-            android:layout_width="0dp"
+            android:layout_width="61dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/result" />
+            android:gravity="end"
+            android:text="@string/result"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/frag_calculator_tv_result_number"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_weight="3"
-            android:text="@string/zero" />
+            android:gravity="start"
+            android:text="@string/zero"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

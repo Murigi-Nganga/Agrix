@@ -29,7 +29,7 @@ class CalculatorFragment : Fragment() {
         // Calculate
         binding.fragCalculatorBtnResult.setOnClickListener {
 
-            if(firstInput.text.isEmpty() || secondInput.text.isEmpty()) {
+            if(firstInput.text.isNullOrEmpty()|| secondInput.text.isNullOrEmpty()) {
 
                 Snackbar.make(binding.root, "Please fill in all fields", Snackbar.LENGTH_LONG).show()
 

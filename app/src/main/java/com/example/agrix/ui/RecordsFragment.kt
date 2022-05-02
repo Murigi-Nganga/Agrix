@@ -2,6 +2,7 @@ package com.example.agrix.ui
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -87,6 +88,11 @@ class RecordsFragment : Fragment() {
             rowItemBinding.fragRecordMeasuringUnit.text = productMeasuringUnits[position]
             rowItemBinding.fragRecordCurrentQuantity.text = productCurrentQuantities[position].toString()
             rowItemBinding.fragRecordLastEdited.text = productLastEdited[position]
+
+            if(position%2 == 0) {
+                // Change bg color for odd items
+                rowItemBinding.fragRecordBg.setBackgroundColor(Color.rgb(224, 242, 241))
+            }
 
             return  rowItemBinding.root
         }

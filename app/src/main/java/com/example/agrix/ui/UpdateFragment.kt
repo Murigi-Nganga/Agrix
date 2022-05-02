@@ -105,7 +105,7 @@ class UpdateFragment : Fragment() {
             } else {
                 val productName = binding.dropdownMenuUpdate.text.toString()
                 val newQuantity = binding.fragUpdateEtQuantity.text.toString().toDouble()
-                if (binding.dropdownMenuUpdate.text.isEmpty() || binding.fragUpdateEtQuantity.text.isEmpty()) {
+                if (binding.dropdownMenuUpdate.text.isEmpty() || binding.fragUpdateEtQuantity.text.isNullOrEmpty()) {
 
                     Snackbar.make(binding.root, "Please fill in all fields!", Snackbar.LENGTH_LONG).show()
 

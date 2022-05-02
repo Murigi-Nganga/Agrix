@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frag_update_ll"
+    android:id="@+id/frag_update_cl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.UpdateFragment">
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:id="@+id/frag_update_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <AutoCompleteTextView
             android:id="@+id/dropdown_menu_update"
@@ -28,35 +34,66 @@
         android:id="@+id/frag_update_ll_quantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frag_update_til">
 
         <TextView
             android:id="@+id/frag_update_tv_current_quantity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/current_quantity" />
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/current_quantity"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/frag_update_quantity_number"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/zero" />
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/frag_update_et_quantity"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/frag_update_quantity_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_marginTop="@dimen/input_top_layout_margin"
         android:hint="@string/new_quantity_hint"
-        android:inputType="numberDecimal"
-        android:autofillHints="" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frag_update_ll_quantity">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/frag_update_et_quantity"
+            android:inputType="numberDecimal"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/textHintColor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/frag_update_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/update" />
+        android:layout_marginTop="44dp"
+        android:height="@dimen/btn_height"
+        android:text="@string/update"
+        app:cornerRadius="@dimen/btn_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frag_update_quantity_til" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

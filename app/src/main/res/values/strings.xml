@@ -30,12 +30,10 @@
     <!--About Screen Text Resources-->
     <string name="about_explanation">Agrix is an application that allows farmers to track their produce quantitatively</string>
     <string name="authors">Authors</string>
-    <string name="app_authors">
-        1. Leslie Asava
-        2. Hope Kagame
-        3. Gracious Ng\'ang\'a
-        4. Martin Mativo
-    </string>
+    <string name="app_author_1">1. Leslie Asava</string>
+    <string name="app_author_2">2. Hope Kagame</string>
+    <string name="app_author_3">3. Martin Mativo</string>
+    <string name="app_author_4">4. Gracious Ng\'ang\'a</string>
 
     <!--    Dropdown measuring units-->
     <string-array name="measuring_units">
@@ -58,8 +56,9 @@
     <string name="second_number">Second Number</string>
     <string name="calculate">Calculate</string>
     <string name="result">Result:</string>
-    <string name="current_quantity">Current Quantity:</string>
+    <string name="current_quantity">Current Quantity:\t</string>  <!-- \t are tab spaces-->
     <string name="zero">0.0</string>
     <string name="no_items">You currently do not have any saved products</string>
+    <string name="last_edited">Last Edited: \t\t\t\t\t</string>
 
 </resources>
