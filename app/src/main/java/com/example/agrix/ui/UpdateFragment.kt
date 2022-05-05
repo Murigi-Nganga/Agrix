@@ -101,13 +101,13 @@ class UpdateFragment : Fragment() {
                 Snackbar.make(binding.root, "There are no products to update!", Snackbar.LENGTH_LONG).show()
 
             } else {
-                val productName = binding.dropdownMenuUpdate.text.toString()
-                val newQuantity = binding.fragUpdateEtQuantity.text.toString().toDouble()
                 if (binding.dropdownMenuUpdate.text.isEmpty() || binding.fragUpdateEtQuantity.text.isNullOrEmpty()) {
 
                     Snackbar.make(binding.root, "Please fill in all fields!", Snackbar.LENGTH_LONG).show()
 
                 } else {
+                    val productName = binding.dropdownMenuUpdate.text.toString()
+                    val newQuantity = binding.fragUpdateEtQuantity.text.toString().toDouble()
                     val result: Int = db.updateData(productName, newQuantity, currentDateTime)
 
                     val snackMessage = if(result == -1) {
