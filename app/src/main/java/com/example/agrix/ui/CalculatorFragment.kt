@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.agrix.databinding.FragmentCalculatorBinding
 import com.google.android.material.snackbar.Snackbar
-import kotlin.math.roundToLong
 
 class CalculatorFragment : Fragment() {
 
@@ -54,7 +53,7 @@ class CalculatorFragment : Fragment() {
                     }
                 }
 
-                //  Display result
+                //  Display result rounded off to 5 decimal places
                 binding.fragCalculatorTvResultNumber.text = String.format("%.5f", result)
 
                 // Empty inputs

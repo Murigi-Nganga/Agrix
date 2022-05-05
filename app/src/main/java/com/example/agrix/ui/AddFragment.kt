@@ -97,6 +97,7 @@ class AddFragment : Fragment() {
                 }
 
                 Snackbar.make(binding.root, snackMessage, Snackbar.LENGTH_LONG).show()
+                // Clear the inputs
                 binding.fragAddEtItem.setText("")
                 binding.fragAddEtQuantity.setText("")
                 binding.dropdownMenuAdd.setText("")

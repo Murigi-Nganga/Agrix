@@ -48,7 +48,7 @@ class RecordsFragment : Fragment() {
         binding.fragRecordsLv.adapter = MyCustomAdapter(requireContext(), productNames, productMeasurements, productQuantities, productLastEdited)
 
         if(productNames.size > 0) {
-            //Gets displayed by default
+            //Gets displayed by default - hides the message that says "You have no saved products"
             binding.noItems.isInvisible = true
         }
 

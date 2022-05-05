@@ -24,7 +24,7 @@ class UpdateFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        // Ensure field is empty to prevent db update error in case element is deleted
+        // Ensure field is empty to prevent db update error in case element is deleted when input is filled
         binding.dropdownMenuUpdate.setText("")
 
         // Add implementation in onResume to ensure item list is maintained
@@ -48,8 +48,6 @@ class UpdateFragment : Fragment() {
         binding = FragmentUpdateBinding.inflate(inflater, container, false)
 
         db = DatabaseHandler(requireContext())
-
-//        binding.dropdownMenuUpdate.setOnItemClickListener()
 
         val c = Calendar.getInstance()
         val currentYear = c.get(Calendar.YEAR)
@@ -119,8 +117,10 @@ class UpdateFragment : Fragment() {
                     }
 
                     Snackbar.make(binding.root, snackMessage, Snackbar.LENGTH_LONG).show()
+                    // clear inputs
                     binding.dropdownMenuUpdate.setText("")
                     binding.fragUpdateEtQuantity.setText("")
+                    // set quantity to 0.0
                     binding.fragUpdateQuantityNumber.text = "0.0"
                 }
             }
@@ -130,6 +130,3 @@ class UpdateFragment : Fragment() {
         return binding.root
     }
 }
-
-//SQLite db error
-//android.database.sqlite.SQLiteException: no such column: Oranges (code 1): , while compiling: SELECT * FROM products WHERE ProductName = Oranges
